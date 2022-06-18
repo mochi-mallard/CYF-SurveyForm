@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Static Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey Form Project</title>
   </head>
   <body>
-    <h1>This is a static template, there is no bundler or bundling involved!</h1>
+    <h1 id="title">Scotland Loves Animation - Glasgow</h1>
+    <p id="description">We'd love to hear what you think!</p>
+
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-input"
+        placeholder="Enter your name"
+        required
+      />
+
+      <label for="email" id="email-label">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-input"
+        placeholder="Enter your email"
+        required
+      />
+
+      <label for="number" id="number-label"
+        >Including this year, how many Scotland Loves Animation events have you attended in total?</label
+      >
+      <input
+        type="number"
+        id="number"
+        name="events-attended"
+        class="form-input"
+        placeholder="Number of events you have attended"
+        min="0"
+        max="11"
+      />
+
+      <label for"" id="">What was your favourite film this year?</label>
+      <select name="films" id="films-dropdown">
+        <option disabled selected value>Select a Film</option>
+        <option value="Lupin III: The First">Lupin III: The First</option>
+        <option value="Shirobako: The Movie">Shirobako: The Movie</option>
+        <option value="Pompo the Cinephile">Pompo the Cinephile</option>
+        <option value="Sing a Bit of Harmony">Sing a Bit of Harmony</option>
+        <option value="Fortune Favours Lady Nikuko">Fortune Favours Lady Nikuko</option>
+        <option value="Looking for Magical Doremi">Looking for Magical Doremi</option>
+        <option value="Knights of Sidonia: Love Woven in the Stars">Knights of Sidonia: Love Woven in the Stars</option>
+        <option value="The Deer King">The Deer King</option>
+    </form>
   </body>
 </html>
