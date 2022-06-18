@@ -11,6 +11,8 @@
     <p id="description">We'd love to hear what you think!</p>
 
     <form id="survey-form">
+
+      <!-- Name -->
       <label for="name" id="name-label">Name:</label>
       <input
         type="text"
@@ -21,6 +23,7 @@
         required
       />
 
+      <!-- Email -->
       <label for="email" id="email-label">Email:</label>
       <input
         type="email"
@@ -31,6 +34,18 @@
         required
       />
 
+      <!-- Age -->
+      <fieldset>
+        <legend>What is your age group?</legend>
+        <label for="age" id="age1">Age 1:</label>
+          <input type="radio" id="age1" name="age-group" class="" />
+        <label for="age" id="age2">Age 2:</label>
+          <input type="radio" id="age2" name="age-group" class="" />
+        <label for="age" id="age3">Age 3:</label>
+          <input type="radio" id="age3" name="age-group" class="" />
+      </fieldset>
+
+      <!-- Number-Min-Max -->
       <label for="number" id="number-label"
         >Including this year, how many Scotland Loves Animation events have you attended in total?</label
       >
@@ -44,6 +59,7 @@
         max="11"
       />
 
+      <!-- Dropdown -->
       <label for"" id="">What was your favourite film this year?</label>
       <select name="films" id="films-dropdown">
         <option disabled selected value>Select a Film</option>
@@ -55,6 +71,11 @@
         <option value="Looking for Magical Doremi">Looking for Magical Doremi</option>
         <option value="Knights of Sidonia: Love Woven in the Stars">Knights of Sidonia: Love Woven in the Stars</option>
         <option value="The Deer King">The Deer King</option>
+      </select>
+
+
+
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
