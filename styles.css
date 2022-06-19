@@ -1,6 +1,7 @@
 :root {
   --form-background: rgba(93, 100, 172, 0.8);
   --font-color: white;
+  --border-color: #ff10f0;
 }
 
 body::before {
@@ -62,7 +63,7 @@ div {
 
 .input-style {
   border-style: solid;
-  border-color: hotpink;
+  border-color: var(--border-color);
   border-width: 0.12rem;
   border-radius: 0.5rem;
 }
@@ -85,10 +86,15 @@ p {
   height: 2rem;
   border-radius: 0.5rem;
   border-style: solid;
-  border-color: darkblue;
+  border-color: #0500ec;
   font-size: 16px;
   font-weight: bold;
   font-family: "Work Sans", sans-serif;
-  background-color: darkblue;
+  background-color: #0500ec;
   color: var(--font-color);
+}
+
+#submit:hover {
+  background-color: #2e2bfc;
+  border-color: #2e2bfc;
 }
