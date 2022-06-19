@@ -5,77 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Survey Form Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 id="title">Scotland Loves Animation - Glasgow</h1>
-    <p id="description">We'd love to hear what you think!</p>
+    <div class="background-image">
+    <div class="algebraic-form">
+      <header>
+        <h1 id="title">Scotland Loves Animation <br>- Feedback Survey</br></h1>
+        <p id="description">We'd love to hear what you think! ♥</p>
+      </header>
 
-    <form id="survey-form">
+      <form id="survey-form">
 
-      <!-- Name -->
-      <label for="name" id="name-label">Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        class="form-input"
-        placeholder="Enter your name"
-        required
-      />
+        <div class="field-group">
+          <!-- Name -->
+          <label for="name" id="name-label">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            class="input-control input-style"
+          />
+        </div>
 
-      <!-- Email -->
-      <label for="email" id="email-label">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        class="form-input"
-        placeholder="Enter your email"
-        required
-      />
+        <div class="field-group">
+          <!-- Email -->
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            class="input-control input-style"
+          />
+        </div>
 
-      <!-- Age -->
-      <fieldset>
-        <legend>What is your age group?</legend>
-        <label for="age" id="age1">Age 1:</label>
-          <input type="radio" id="age1" name="age-group" class="" />
-        <label for="age" id="age2">Age 2:</label>
-          <input type="radio" id="age2" name="age-group" class="" />
-        <label for="age" id="age3">Age 3:</label>
-          <input type="radio" id="age3" name="age-group" class="" />
-      </fieldset>
+        <div class="field-container">
+          <!-- Age: Radio -->
+          <fieldset class="input-style">
+            <legend>What is your age group?</legend>
+            <div class="field-group">
+              <label for="age1">
+                <input type="radio" id="age1" name="age" value="17 and under" class="radio-input" />17 and under
+              </label>
+                
+              <label for="age2">
+                <input type="radio" id="age2" name="age" value="18 - 24" class="radio-input" />18 - 24
+              </label>
 
-      <!-- Number-Min-Max -->
-      <label for="number" id="number-label"
-        >Including this year, how many Scotland Loves Animation events have you attended in total?</label
-      >
-      <input
-        type="number"
-        id="number"
-        name="events-attended"
-        class="form-input"
-        placeholder="Number of events you have attended"
-        min="0"
-        max="11"
-      />
+              <label for="age3">
+                <input type="radio" id="age3" name="age" value="25 - 34" class="radio-input" />25 - 34
+              </label>
 
-      <!-- Dropdown -->
-      <label for"" id="">What was your favourite film this year?</label>
-      <select name="films" id="films-dropdown">
-        <option disabled selected value>Select a Film</option>
-        <option value="Lupin III: The First">Lupin III: The First</option>
-        <option value="Shirobako: The Movie">Shirobako: The Movie</option>
-        <option value="Pompo the Cinephile">Pompo the Cinephile</option>
-        <option value="Sing a Bit of Harmony">Sing a Bit of Harmony</option>
-        <option value="Fortune Favours Lady Nikuko">Fortune Favours Lady Nikuko</option>
-        <option value="Looking for Magical Doremi">Looking for Magical Doremi</option>
-        <option value="Knights of Sidonia: Love Woven in the Stars">Knights of Sidonia: Love Woven in the Stars</option>
-        <option value="The Deer King">The Deer King</option>
-      </select>
+              <label for="age4">
+                <input type="radio" id="age4" name="age" value="35 - 44" class="radio-input" />35 - 44
+              </label>
 
+              <label for="age5">
+                <input type="radio" id="age5" name="age" value="45 - 54" class="radio-input" />45 - 54
+              </label>
 
+              <label for="age6">
+                <input type="radio" id="age6" name="age" value="55 - 64" class="radio-input" />55 - 64
+              </label>
 
-      <input type="submit" value="Submit" />
-    </form>
+              <label for="age7">
+                <input type="radio" id="age7" name="age" value="65 - 74" class="radio-input" />65 - 74
+              </label>
+
+              <label for="age8">
+                <input type="radio" id="age8" name="age" value="75 and over" class="radio-input" />75 and over
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field-group">
+          <!-- Number-Min-Max -->
+          <label for="number" id="number-label"
+            >Including this year, how many Scotland Loves Animation events have you attended in total?</label
+          >
+          <input
+            type="number"
+            id="number"
+            name="events-attended"
+            class="input-control input-style"
+            placeholder="Number of events you have attended"
+            min="1"
+            max="11"
+          />
+        </div>
+
+        <div class="field-group">
+          <!-- Dropdown -->
+          <label for"" id="">What was your favourite film this year?</label> 
+          <select name="films" id="dropdown" class="input-control input-style" >
+            <option disabled selected value>Select a Film</option>
+            <option value="Lupin III: The First">Lupin III: The First</option>
+            <option value="Shirobako: The Movie">Shirobako: The Movie</option>
+            <option value="Pompo the Cinephile">Pompo the Cinephile</option>
+            <option value="Sing a Bit of Harmony">Sing a Bit of Harmony</option>
+            <option value="Fortune Favours Lady Nikuko">Fortune Favours Lady Nikuko</option>
+            <option value="Looking for Magical Doremi">Looking for Magical Doremi</option>
+            <option value="Knights of Sidonia: Love Woven in the Stars">Knights of Sidonia: Love Woven in the Stars</option>
+            <option value="The Deer King">The Deer King</option>
+          </select>
+        </div>
+
+        <div class="field-container">
+          <!-- Genres: Checkbox -->
+          <fieldset class="input-style">
+            <legend>What film genres do you enjoy? Check all that apply.</legend>
+            <div class="field-group">
+                <label for="romance" id="genre-label">
+                  <input type="checkbox" id="romance" name="film-genres" value="Romance" class="checkbox-input" />Romance
+                </label>
+                <label for="comedy" id="genre-label">
+                  <input type="checkbox" id="comedy" name="film-genres" value="comedy" class="checkbox-input" />Comedy
+                </label>
+                <label for="sports" id="genre-label">
+                  <input type="checkbox" id="sports" name="film-genres" value="sports" class="checkbox-input" />Sports
+                </label>
+                <label for="slice-of-life" id="genre-label">
+                  <input type="checkbox" id="slice-of-life" name="film-genres" value="slice-of-life" class="checkbox-input" />Slice of Life
+                </label>
+                <label for="sci-fi" id="genre-label">
+                  <input type="checkbox" id="sci-fi" name="film-genres" value="sci-fi" class="checkbox-input" />Sci-Fi
+                </label>
+                <label for="adventure" id="genre-label">
+                  <input type="checkbox" id="adventure" name="film-genres" value="adventure" class="checkbox-input" />Adventure
+                </label>
+                <label for="psychological" id="genre-label">
+                  <input type="checkbox" id="psychological" name="film-genres" value="psychological" class="checkbox-input" />Psychological
+                </label>
+                <label for="horror" id="genre-label">
+                  <input type="checkbox" id="horror" name="film-genres" value="horror" class="checkbox-input" />Horror
+                </label>
+            </div>
+          </fieldset>
+        </div>
+      
+        <div class="field-container">
+          <!-- Rate: Radio -->
+          <fieldset class="input-style">
+            <legend>Overall, how satisfied were you with the event?</legend>
+            <div class="field-group">
+              <label for="very-satisfied" id="rating-label">
+                <input type="radio" id="very-satisfied" name="rating" value="very satisfied" class="radio-input" />Very Satisfied 
+              </label>
+
+              <label for="satisfied" id="rating-label">
+                <input type="radio" id="satisfied" name="rating" value="satisfied" class="radio-input" />Satisfied 
+              </label>
+
+              <label for="neutral" id="rating-label">
+                <input type="radio" id="neutral" name="rating" value="neutral" class="radio-input" />Neutral
+              </label>
+
+              <label for="dissatisfied" id="rating-label">
+                <input type="radio" id="dissatisfied" name="rating" value="dissatisfied" class="radio-input" />Dissatisfied 
+              </label>
+
+              <label for="very-dissatisfied" id="rating-label">
+                <input type="radio" id="very-dissatisfied" name="rating" value="very dissatisfied" class="radio-input" />Very Dissatisfied 
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+          <!-- Text Areas -->
+          <div class="field-group">
+          <label for="likes">Which elements of this year's Scotland Loves Anime event did you like the most?</label>
+          <textarea id="likes" name="likes" cols="50" rows="5" class="input-style"></textarea>
+          </div>
+
+          <div class="field-group">
+          <label for="dislikes">What, if anything, did you dislike about this event?</label>
+          <textarea id="dislikes" name="dislikes" cols="50" rows="5" class="input-style"></textarea>
+          </div>
+
+          <div class="field-group">
+          <label for="extra-comments">Is there anything else you would like us to know?</label>
+          <textarea id="extra-comments" name="extra-comments" cols="50" rows="5" class="input-style"></textarea>
+          </div> 
+        
+
+      <!-- Submit Button -->
+      <div>
+        <input type="submit" id="submit" value="Submit" />
+      </div>
+      
+      </form>
+    </div>
+  </div>
   </body>
 </html>
